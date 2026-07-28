@@ -619,120 +619,123 @@ body .authorization { background: 0 0; } #app .authorization { background-image:
 }
       `;
   
-      document.head.appendChild(hudStyleElement);
-  
-      const hudElement = document.createElement("div");
-      hudElement.id = 'OldHudContainer';
-  
-      hudElement.innerHTML = `
+        document.head.appendChild(hudStyleElement);
+        const hudElement = document.createElement("div");
+        hudElement.id = 'OldHudContainer';
+        hudElement.innerHTML = `
       <div class="Old-Fixed-Hud">
-      <div class="Old-Fixed-HudTop">
-        <div class="Old-Fixed-Logo">
-           <img src="${oldRadmirConfig.logo[1]}">
-           <div class="Old-Fixed-Bonus">x3</div>
-        </div>
-        <div class="Old-Fixed-Main">
-           <div class="Old-Fixed-Params">
+        <div class="Old-Fixed-HudTop">
+          <div class="Old-Fixed-Logo">
+            <img src="${oldRadmirConfig.logo[1]}">
+            <div class="Old-Fixed-Bonus">x2</div>
+          </div>
+          <div class="Old-Fixed-Main">
+            <div class="Old-Fixed-Params">
               <div class="Old-Fixed-Cash"><img src="${oldRadmirConfig.icons.cash}"><span>0</span></div>
               <div class="Old-Fixed-Params__all">
-                 <div class="Old-Fixed-Param health">
-                    <img src="${oldRadmirConfig.icons.health}" class="old-param__icon">
-                    <div class="Old-Param-Progress">
-                       <div class="Old-Progress__Values" style="width:100%"><img src="${oldRadmirConfig.icons.circle}" class="circle"></div>
-                    </div>
-                    <span class="Old-Param-Values">100</span>
-                 </div>
-                 <div class="Old-Fixed-Param armour">
-                    <img src="${oldRadmirConfig.icons.armour}" class="old-param__icon">
-                    <div class="Old-Param-Progress">
-                       <div class="Old-Progress__Values" style="width:100%"><img src="${oldRadmirConfig.icons.circle}" class="circle"></div>
-                    </div>
-                    <span class="Old-Param-Values">100</span>
-                 </div>
-                 <div class="Old-Fixed-Param hunger">
-                    <img src="${oldRadmirConfig.icons.hunger}" class="old-param__icon">
-                    <div class="Old-Param-Progress">
-                       <div class="Old-Progress__Values" style="width:100%"><img src="${oldRadmirConfig.icons.circle}" class="circle"></div>
-                    </div>
-                    <span class="Old-Param-Values">100</span>
-                 </div>
-                 <div class="Old-Fixed-Param breath">
-                    <img src="${oldRadmirConfig.icons.breath}" class="old-param__icon">
-                    <div class="Old-Param-Progress">
-                       <div class="Old-Progress__Values" style="width:100%"><img src="${oldRadmirConfig.icons.circle}" class="circle"></div>
-                    </div>
-                    <span class="Old-Param-Values">100</span>
-                 </div>
+                <div class="Old-Fixed-Param health">
+                  <img src="${oldRadmirConfig.icons.health}" class="old-param__icon">
+                  <div class="Old-Param-Progress">
+                    <div class="Old-Progress__Values" style="width:100%"><img src="${oldRadmirConfig.icons.circle}" class="circle"></div>
+                  </div>
+                  <span class="Old-Param-Values">100</span>
+                </div>
+                <div class="Old-Fixed-Param armour">
+                  <img src="${oldRadmirConfig.icons.armour}" class="old-param__icon">
+                  <div class="Old-Param-Progress">
+                    <div class="Old-Progress__Values" style="width:0%"><img src="${oldRadmirConfig.icons.circle}" class="circle"></div>
+                  </div>
+                  <span class="Old-Param-Values">0</span>
+                </div>
+                <div class="Old-Fixed-Param hunger">
+                  <img src="${oldRadmirConfig.icons.hunger}" class="old-param__icon">
+                  <div class="Old-Param-Progress">
+                    <div class="Old-Progress__Values" style="width:100%"><img src="${oldRadmirConfig.icons.circle}" class="circle"></div>
+                  </div>
+                  <span class="Old-Param-Values">100</span>
+                </div>
+                <div class="Old-Fixed-Param breath">
+                  <img src="${oldRadmirConfig.icons.breath}" class="old-param__icon">
+                  <div class="Old-Param-Progress">
+                    <div class="Old-Progress__Values" style="width:100%"><img src="${oldRadmirConfig.icons.circle}" class="circle"></div>
+                  </div>
+                  <span class="Old-Param-Values">100</span>
+                </div>
               </div>
-           </div>
-           <div class="Old-Fixed-Weapon">
-              <img src="${oldRadmirConfig.icons.wanted_back}" class="Old-Fixed-Weapon_back"> <img src="${oldRadmirConfig.weapon[0]}" class="Old-Fixed-Weapon_icon">
-              <div class="Old-Fixed-Weapon_ammo"><span class="Ammo-in-clip">1</span><span class="Ammo-full">1</span></div>
-           </div>
+            </div>
+            <div class="Old-Fixed-Weapon">
+            <img src="${oldRadmirConfig.icons.weapon_back}" class="Old-Fixed-weapon_back">
+              <img src="${oldRadmirConfig.weapon[0]}" class="Old-Fixed-Weapon_icon">
+              <div class="Old-Fixed-Weapon_ammo"><span class="Ammo-in-clip">0</span><span class="Ammo-full">/0</span></div>
+            </div>
+          </div>
+          <div class="Old-Fixed-Wanted">
+            <img src="${oldRadmirConfig.icons.wanted_back}" class="Old-Fixed-wanted_back">
+            <div class="Wanted_row">
+              <img src="${oldRadmirConfig.icons.inactive_wanted}">
+              <img src="${oldRadmirConfig.icons.inactive_wanted}">
+              <img src="${oldRadmirConfig.icons.inactive_wanted}">
+              <img src="${oldRadmirConfig.icons.inactive_wanted}">
+              <img src="${oldRadmirConfig.icons.inactive_wanted}">
+              <img src="${oldRadmirConfig.icons.inactive_wanted}">
+            </div>
+          </div>
         </div>
-        <div class="Old-Fixed-Wanted">
-           <img src="${oldRadmirConfig.icons.weapon_back}" class="Old-Fixed-Wanted_back">
-           <div class="Wanted_row"><img src="${oldRadmirConfig.icons.inactive_wanted}" class="wanted-innactive"> <img src="${oldRadmirConfig.icons.inactive_wanted}" class="wanted-innactive"> <img src="${oldRadmirConfig.icons.inactive_wanted}" class="wanted-innactive"> <img src="${oldRadmirConfig.icons.active_wanted}" class="wanted-active"> <img src="${oldRadmirConfig.icons.active_wanted}" class="wanted-active"> <img src="${oldRadmirConfig.icons.active_wanted}" class="wanted-active"></div>
+        <div class="Old-Fixed-HudBottom">
+        <div class="Old-Fixed-Freeze">
+        <div class="Old-Fixed-ZZ">
+        <img src="${oldRadmirConfig.icons.zone}" class="Old-Fixed-ZZ_icon">
+        </div>
+        <span class="Old-Fixed-Freeze_text">Freeze:</span>
+        <span class="Old-Fixed-Freeze_value">100</span>
+        </div>
         </div>
       </div>
-      <div class="Old-Fixed-HudBottom">
-      <div class="Old-Fixed-ZZ"><img src="${oldRadmirConfig.icons.zone}" class="Old-Fixed-ZZ_icon"></div>
-      <div class="Old-Fixed-Freeze">
-      <span class="Old-Fixed-Freeze_text">Freeze:</span>
-      <span class="Old-Fixed-Freeze_value">100</span>
-      </div></div>
-      `;
-  
-      document.body.appendChild(hudElement);
-      hudElements.push(OldHudContainer);
+    `;
+        document.body.appendChild(hudElement);
+        hudElements.push(hudElement);
     }
+
     const updateFunctions = {
         show: (value) => {
             const hudEl = document.querySelector(".Old-Fixed-Hud");
             if (hudEl) hudEl.style.display = +value >= 1 ? "" : "none";
         },
-    
         showBars: (value) => {
             updateFunctions.show(value);
         },
-    
         weapon: (value) => {
             const weaponIcon = document.querySelector(".Old-Fixed-Weapon_icon");
             if (weaponIcon) {
                 const weaponSrc = oldRadmirConfig.weapon[value];
                 if (weaponSrc) {
                     weaponIcon.src = weaponSrc;
-                } 
+                }
             }
-    
             const ammoEls = document.querySelectorAll(".Old-Fixed-Weapon_ammo span");
             ammoEls.forEach(el => {
                 if (el) el.style.display = value >= 16 ? "" : "none";
             });
         },
-    
         health: (value) => {
             updateParam("health", value);
         },
-    
         armour: (value) => {
             updateParam("armour", value);
         },
-    
         hunger: (value) => {
             updateParam("hunger", value);
         },
-    
         breath: (value) => {
             const breathWrapper = document.querySelector(".Old-Fixed-Param.breath .Old-Param-Progress")?.parentElement;
             if (breathWrapper) breathWrapper.style.display = value < 99 ? "" : "none";
             updateParam("breath", value);
         },
         bonus: (bonusValue) => {
-            const bonusEl = document.querySelector(".Old-Fixed-Bonus"); 
+            const bonusEl = document.querySelector(".Old-Fixed-Bonus");
             if (bonusEl) {
                 if (bonusValue <= 1) {
-                    bonusEl.style.display = "none";
+                    bonusEl.style.display = "fixed";
                 } else {
                     bonusEl.style.display = "";
                     bonusEl.textContent = `x${bonusValue}`;
@@ -743,101 +746,73 @@ body .authorization { background: 0 0; } #app .authorization { background-image:
             const serverWrapper = document.querySelector(".Old-Fixed-Logo img");
             if (serverWrapper) {
                 if (serverId <= 0) {
-                    serverWrapper.style.display = "none"; 
+                    serverWrapper.style.display = "fixed";
                 } else {
-                    serverWrapper.style.display = ""; 
+                    serverWrapper.style.display = "fixed";
                     const serverLogo = oldRadmirConfig.logo[serverId];
                     if (serverLogo) {
-                        serverWrapper.src = serverLogo; 
-                    } 
+                        serverWrapper.src = serverLogo;
+                    }
                 }
             }
         },
-    
         money: (value) => {
             const moneyEl = document.querySelector(".Old-Fixed-Cash span");
             if (moneyEl) moneyEl.textContent = formatNumberWithDots(value);
         },
-    
         wanted: (value) => {
-            updateWanted(value);
+            const wantedIcons = document.querySelectorAll(".Wanted_row img");
+            for (let i = 0; i < wantedIcons.length; i++) {
+                wantedIcons[i].src = (i < value)
+                    ? oldRadmirConfig.icons.active_wanted
+                    : oldRadmirConfig.icons.inactive_wanted;
+            }
             const wantedWrapper = document.querySelector(".Old-Fixed-Wanted");
             if (wantedWrapper) {
-                if (value === 0 && !oldRadmirConfig.wantedAlwaysShow) {
-                    wantedWrapper.style.display = "none";
-                    return;
-                }
-                wantedWrapper.style.display = "";
+                wantedWrapper.style.display = (value > 0) ? "" : "none";
             }
-    
-            const wantedEls = document.querySelectorAll(".Wanted_row img");
-            wantedEls.forEach((el, index) => {
-                if (el) {
-                    if ((5 - index) / value >= 1 || (5 - index === 0 && value === 0)) {
-                        el.src = oldRadmirConfig.icons.inactive_wanted;
-                        el.className = "wanted-innactive";
-                    } else {
-                        el.src = oldRadmirConfig.icons.active_wanted;
-                        el.className = "wanted-active";
-                    }
-                }
-            });
         },
-    
         ammoInClip: (value) => {
             const inClipEl = document.querySelector(".Ammo-in-clip");
             if (inClipEl) inClipEl.textContent = value;
         },
-    
         totalAmmo: (value) => {
             const totalAmmoEl = document.querySelector(".Ammo-full");
-            if (totalAmmoEl) totalAmmoEl.textContent = "/" + value;
+            if (totalAmmoEl) totalAmmoEl.textContent = " " + value;
         },
-        
         freeze: (value) => {
             const freezeValueEl = document.querySelector(".Old-Fixed-Freeze_value");
-        
             if (freezeValueEl) {
-                const formattedValue = String(value).padStart(3, '0');
-                freezeValueEl.textContent = formattedValue; 
+                const formattedValue = String(value).padStart(1, '1');
+        freezeValueEl.textContent = '100';
             }
         },
-        /*freeze2: () => {
-            const freezeEl = document.querySelector(".Old-Fixed-Freeze");
-            const isVisible = window.interface("Hud").isNewYear;
-            if (freezeEl) {
-                freezeEl.style.display = isVisible ? "" : "none";
-            }
-        },*/
-        
-        greenZone: (isVisible) => {
+                greenZone: (isVisible) => {
             const greenZoneEl = document.querySelector(".Old-Fixed-ZZ");
             if (greenZoneEl) {
-                greenZoneEl.style.display = isVisible ? "" : "none"; 
+                greenZoneEl.style.display = isVisible ? "" : "none";
             }
         },
     };
-    
+
     function onInfoChange(type, value) {
         setTimeout(() => {
-            loadingNotification.style.opacity = '0';
-            setTimeout(() => {
-                if (loadingNotification) {
-                    loadingNotification.remove();
-                }
-            }, 2500);
+            if (loadingNotification) {
+                loadingNotification.style.opacity = '0';
+                setTimeout(() => {
+                    if (loadingNotification && loadingNotification.parentNode) {
+                        loadingNotification.remove();
+                    }
+                }, 2500);
+                loadingNotification = null;
+            }
         }, 1000);
+
         if (updateFunctions[type]) {
             updateFunctions[type](value);
-        } 
-        const hudInfo = window.interface("Hud").info;
-        Object.entries(updateFunctions).forEach(([key, func]) => {
-            if (typeof func === "function" && hudInfo.hasOwnProperty(key)) {
-                func(hudInfo[key]);
-            }
-        });
+        }
     }
-    
+
     function updateParam(paramClass, value) {
         const paramElement = document.querySelector(`.Old-Fixed-Param.${paramClass}`);
         if (paramElement) {
@@ -847,28 +822,14 @@ body .authorization { background: 0 0; } #app .authorization { background-image:
             valueText.textContent = value;
         }
     }
-    
-    function updateWanted(level) {
-        const wantedIcons = document.querySelectorAll(".Wanted_row img");
-        wantedIcons.forEach((icon, index) => {
-            if (index < level) {
-                icon.classList.remove("wanted-innactive");
-                icon.classList.add("wanted-active");
-            } else {
-                icon.classList.remove("wanted-active");
-                icon.classList.add("wanted-innactive");
-            }
-        });
-    }
-    
+
     function initializeHudProxy() {
         const checkInterval = setInterval(() => {
             if (typeof window.interface === "function" && window.interface("Hud").info) {
                 clearInterval(checkInterval);
-    
                 const hudInfo = window.interface("Hud").info;
                 const clonedHudInfo = JSON.parse(JSON.stringify(hudInfo));
-    
+
                 window.interface("Hud").info = new Proxy(clonedHudInfo, {
                     set(target, prop, value) {
                         if (target[prop] !== value) {
@@ -878,10 +839,12 @@ body .authorization { background: 0 0; } #app .authorization { background-image:
                         return Reflect.set(target, prop, value);
                     }
                 });
+
                 window.interface("Hud").setServer = (serverId) => {
                     onInfoChange("server", serverId);
                     window.interface("Hud").server = serverId;
                 };
+
                 window.interface("Hud").setBonus = (bonusValue) => {
                     onInfoChange("bonus", bonusValue);
                     window.interface("Hud").bonus = bonusValue;
@@ -889,30 +852,270 @@ body .authorization { background: 0 0; } #app .authorization { background-image:
                 window.interface("Hud").showGreenZoneTab = () => {
                     onInfoChange("greenZone", true);
                 };
-                
                 window.interface("Hud").hideGreenZoneTab = () => {
                     onInfoChange("greenZone", false);
                 };
-            } 
+
+                
+                createHud();
+
+                
+                const props = ['health', 'armour', 'hunger', 'breath', 'money', 'wanted', 'ammoInClip', 'totalAmmo', 'freeze', 'weapon', 'show'];
+                props.forEach(prop => {
+                    if (prop in hudInfo && updateFunctions[prop]) {
+                        updateFunctions[prop](hudInfo[prop]);
+                    }
+                });
+
+                if ('server' in window.interface("Hud")) updateFunctions.server(window.interface("Hud").server);
+                if ('bonus' in window.interface("Hud")) updateFunctions.bonus(window.interface("Hud").bonus);
+            }
         }, 100);
     }
-    
+
     initializeHudProxy();
-    
-    createHud();
     window.onInfoChange = onInfoChange;
-    setTimeout(() => {
-        hudElements.forEach(el => el.remove());
-        
-        if (hudScript) {
-            hudScript.remove();
-        }
-        if (hudStyleElement) {
-            hudStyleElement.remove();
-        }
-    });
-};
+}
+
 AddHud();
+
+let logoStyle = null;
+let logoWidth = 18; 
+let logoHeight = 5; 
+
+function applyLogoSize(w = logoWidth, h = logoHeight) {
+
+    logoWidth = w;
+    logoHeight = h;
+
+    if (logoStyle) {
+        logoStyle.remove();
+        logoStyle = null;
+    }
+
+    const style = document.createElement("style");
+
+    style.innerHTML = `
+        .Old-Fixed-Logo img {
+            width: ${logoWidth}vh !important;
+            height: ${logoHeight}vh !important;
+        }
+    `;
+
+    document.head.appendChild(style);
+
+    logoStyle = style;
+}
+
+function openLogoMenu() {
+
+    window.addDialogInQueue(
+        `[0,1,"LOGO","Введите размер (ширина высота, например: 20 6)","Применить","Закрыть",0,0]`,
+        "",
+        0
+    );
+
+    const orig = window.sendClientEvent;
+
+    window.sendClientEvent = function (...args) {
+
+        if (args.includes("OnDialogResponse")) {
+
+            let input = (args[5] || "").trim();
+
+            const parts = input.split(" ");
+
+            let w = parseFloat(parts[0]);
+            let h = parseFloat(parts[1]);
+
+            if (!isNaN(w) && !isNaN(h)) {
+                applyLogoSize(w, h);
+            }
+
+            window.sendClientEvent = orig;
+        }
+
+        return orig.apply(this, args);
+        
+    };
+}
+
+(function () {
+
+    const wait = setInterval(() => {
+
+        if (!window.sendChatInput) return;
+
+        clearInterval(wait);
+
+        const orig = window.sendChatInput;
+
+        window.sendChatInput = function (...a) {
+
+            const msg = a.join("").trim();
+
+            if (msg === "/logo") {
+                openLogoMenu();
+                return;
+            }
+
+            return orig.apply(this, a);
+        };
+
+    }, 500);
+
+})();
+
+const observer = new MutationObserver(() => {
+    applyLogoSize();
+});
+
+(function () {
+    if (window.__greenZoneFixed) return;
+    window.__greenZoneFixed = true;
+    const hideStyle = document.createElement('style');
+    hideStyle.id = '__hideGreenZoneStyle';
+    hideStyle.textContent = `
+        [class*="green"].__hidden-by-script,
+        [class*="zone"].__hidden-by-script,
+        .hud-radmir-greenzone.__hidden-by-script,
+        .green-zone.__hidden-by-script,
+        .gzone.__hidden-by-script,
+        .map__greenzone.__hidden-by-script,
+        .map-greenzone.__hidden-by-script,
+        svg[class*="zone"].__hidden-by-script,
+        svg[class*="green"].__hidden-by-script,
+        #app .hud-circle-green.__hidden-by-script,
+        #app .hud-round-green.__hidden-by-script {
+            position: relative !important;
+            transform: translateX(-100vw) !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+        }
+    `;
+    document.head.appendChild(hideStyle);
+    function hideOriginalZones() {
+        const selectors = [
+            '[class*="green"]',
+            '[class*="zone"]',
+            '.hud-radmir-greenzone',
+            '.green-zone',
+            '.gzone',
+            '.map__greenzone',
+            '.map-greenzone',
+            'svg[class*="zone"]',
+            'svg[class*="green"]',
+            '#app .hud-circle-green',
+            '#app .hud-round-green'
+        ];
+        const all = document.querySelectorAll(selectors.join(', '));
+        all.forEach(el => el.classList.add('__hidden-by-script'));
+    }
+    function showOriginalZones() {
+        const all = document.querySelectorAll('.__hidden-by-script');
+        all.forEach(el => el.classList.remove('__hidden-by-script'));
+    }
+    const customZone = document.createElement('div');
+customZone.className = 'Old-Fixed-ZZ';
+
+customZone.innerHTML = `
+    <div class="OLD-RADMIR-ICON_WRAPPER">
+        <img class="OLD-RADMIR-ICON" src="data:image/png;base64,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" />
+    </div>
+
+    <div class="OLD-RADMIR-TEXT_WRAPPER">
+        <div class="OLD-RADMIR-TEXT">БЕЗОПАСНАЯ ЗОНА</div>
+        <div class="OLD-RADMIR-TEXT-TWO">Вы находитесь в безопасной зоне.</div>
+    </div>
+`;
+
+customZone.style.cssText = `
+    position:absolute;
+    left:7vw;
+    bottom:27vh;
+    display:none;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-start;
+    gap:3vh;
+    z-index: -1;
+`;
+
+document.body.appendChild(customZone);
+
+customZone.style.setProperty('display', 'none', 'important');
+customZone.style.setProperty('flex-direction', 'row', 'important');
+customZone.style.setProperty('align-items', 'center', 'important');
+
+const zoneStyle = document.createElement('style');
+zoneStyle.textContent += `
+.OLD-RADMIR-ICON_WRAPPER {
+    display: flex;
+    left: -4.5vh;
+    bottom: -3.9vh;
+    position: relative;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+.OLD-RADMIR-ICON {
+    display: block;
+    object-fit: contain;
+}
+.OLD-RADMIR-TEXT_WRAPPER {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15vh;
+    z-index: -1;
+}
+.OLD-RADMIR-TEXT {
+    color: #ffffff;
+    text-shadow: 3px 3px 5px #00000080;
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.OLD-RADMIR-TEXT-TWO {
+    color: #ffffff;
+    text-shadow: .28vh .28vh .46vh #00000080;
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+`;
+
+document.head.appendChild(zoneStyle);
+
+    let attempts = 0;
+    const maxAttempts = 100;
+    const initInterval = setInterval(() => {
+        attempts++;
+        if (attempts > maxAttempts) {
+            clearInterval(initInterval);
+            console.warn('Green zone initialization timeout: window.interface not available');
+            return;
+        }
+        if (typeof window.interface !== 'function') return;
+        const hud = window.interface('Hud');
+        if (!hud || !hud.showGreenZoneTab || !hud.hideGreenZoneTab) return;
+        clearInterval(initInterval);
+
+        const origShow = hud.showGreenZoneTab;
+        const origHide = hud.hideGreenZoneTab;
+
+hud.showGreenZoneTab = function () {
+    customZone.style.display = 'none';
+    customZone.style.flexDirection = 'row';
+    customZone.style.alignItems = 'center';
+    return origShow.apply(this, arguments);
+};
+        hud.hideGreenZoneTab = function () {
+            customZone.style.display = 'none';
+            return origHide.apply(this, arguments);
+        };
+    }, 100);
+})();
 
 (function () {
     let hudHide = 0;
@@ -960,14 +1163,6 @@ AddHud();
 setTimeout(() => {
     if (typeof window.sendChatInput === "function") {
         window.sendChatInput("/hudscalefix");
-    } else {
-        console.log("sendChatInput asdasd");
-    }
-}, 3000);
-
-setTimeout(() => {
-    if (typeof window.sendChatInput === "function") {
-        window.sendChatInput("/moonfix");
     } else {
         console.log("sendChatInput asdasd");
     }
