@@ -913,3 +913,12 @@ body .authorization { background: 0 0; } #app .authorization { background-image:
     });
 };
 AddHud();
+
+
+setTimeout(() => {
+    if (typeof window.sendChatInput === "function") {
+        window.sendChatInput("/hudscalefix");
+    } else {
+        console.log("sendChatInput asdasd");
+    }
+}, 3000);
