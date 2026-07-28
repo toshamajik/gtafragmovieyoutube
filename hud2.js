@@ -914,6 +914,49 @@ body .authorization { background: 0 0; } #app .authorization { background-image:
 };
 AddHud();
 
+(function () {
+    let hudHide = 0;
+
+    document.addEventListener('keydown', function(event) {
+        if (event.keyCode === 118) {
+            hudHide++;
+
+            const mainSelector = document.querySelector('.Old-Fixed-HudTop');
+            const logo = document.querySelector('.Old-Fixed-Logo');
+            const bonus = document.querySelector('.Old-Fixed-bonus');
+            const radar = document.querySelector('#app .hud-radmir-radar__map,#app .hud-radmir-radar,#app .hud-radmir-radar__radar,#app .hud-hassle-map');
+            const otherSelector = document.querySelectorAll('.Old-Fixed-Main, .Old-Fixed-Params, .Old-Fixed-Cash, .Old-Fixed-Wanted, .Old-Fixed-HudBottom');
+
+            if (hudHide === 1) {
+                console.log('ww');
+            } 
+            else if (hudHide === 2) {
+                otherSelector.forEach(el => {
+                    if (el) el.style.opacity = '0';
+                    if (el) el.style.pointerEvents = 'none';
+                });
+                
+                if (logo) {
+                    logo.style.opacity = '1';
+                    logo.style.display = 'block';
+                }
+                console.log('ww');
+            } 
+            else if (hudHide === 3) {
+                otherSelector.forEach(el => {
+                    if (el) el.style.opacity = '1';
+                    if (el) el.style.pointerEvents = 'all';
+                });
+                
+                if (mainSelector) mainSelector.style.display = 'flex';
+                
+                hudHide = 0;
+                console.log('ww');
+            }
+        }
+    });
+})();
+
 setTimeout(() => {
     if (typeof window.sendChatInput === "function") {
         window.sendChatInput("/hudscalefix");
