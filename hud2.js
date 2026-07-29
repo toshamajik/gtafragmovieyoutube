@@ -735,7 +735,7 @@ body .authorization { background: 0 0; } #app .authorization { background-image:
             const bonusEl = document.querySelector(".Old-Fixed-Bonus");
             if (bonusEl) {
                 if (bonusValue <= 1) {
-                    bonusEl.style.display = "fixed";
+                    bonusEl.style.display = "none";
                 } else {
                     bonusEl.style.display = "";
                     bonusEl.textContent = `x${bonusValue}`;
@@ -778,7 +778,7 @@ body .authorization { background: 0 0; } #app .authorization { background-image:
         },
         totalAmmo: (value) => {
             const totalAmmoEl = document.querySelector(".Ammo-full");
-            if (totalAmmoEl) totalAmmoEl.textContent = " " + value;
+            if (totalAmmoEl) totalAmmoEl.textContent = "/" + value;
         },
         freeze: (value) => {
             const freezeValueEl = document.querySelector(".Old-Fixed-Freeze_value");
@@ -787,7 +787,7 @@ body .authorization { background: 0 0; } #app .authorization { background-image:
         freezeValueEl.textContent = '100';
             }
         },
-                greenZone: (isVisible) => {
+        greenZone: (isVisible) => {
             const greenZoneEl = document.querySelector(".Old-Fixed-ZZ");
             if (greenZoneEl) {
                 greenZoneEl.style.display = isVisible ? "" : "none";
