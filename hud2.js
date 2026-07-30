@@ -943,40 +943,59 @@ body .authorization { background: 0 0; } #app .authorization { background-image:
             }
         });
     }
-     function updateCapture(capture,value) {
-        const captureicons = document.querySelectorAll("")
-	            if (oldRadmirConfig.speedometer !== undefined) {
-				if (oldRadmirConfig.speedometer.secondary.length) {
-						e += `#app .hud-radmir-speedometer-secondary {background-image: url(${oldRadmirConfig.speedometer.secondary});}`
-			}
-				if (oldRadmirConfig.speedometer.main.length) {
-						e += `#app .hud-radmir-speedometer-main__speed {background-image: url(${oldRadmirConfig.speedometer.main});}`
-			}
-	}
-    			if (oldRadmirConfig.capture !== undefined) {
-				if (oldRadmirConfig.capture.my.length) {
-						e += `#app .capture-table__col-kills.my {background-image: url(${oldRadmirConfig.capture.capture.my});}`
-			}
-				if (oldRadmirConfig.capture.enemyies.length) {
-						e += `#app .capture-table__col-kills {background-image: url(${oldRadmirConfig.capture.enemyies});}`
-			}
-				if (oldRadmirConfig.capture.timer.length) {
-						e += `#app .capture-table__timer {background-image: url(${oldRadmirConfig.capture.capture.timer});}`
-			}
-	}
-    	this.setNewStyles(e)
-		this.setNewStyles(oldRadmirConfig.capture)
-			},
-	 setNewStyles(e) {
-		const a = document.createElement("style")
-				a.innerHTML = e
-				document.head.appendChild(a)
-			},
-		init() {
-				if (oldRadmirConfig) {
-					console.log('assets not found')
-					return
+function updateCapture(capture, value) {
+    let styles = '';
+    
+    // Проверяем наличие speedometer
+    if (oldRadmirConfig && oldRadmirConfig.speedometer) {
+        if (oldRadmirConfig.speedometer.secondary && oldRadmirConfig.speedometer.secondary.length > 0) {
+            styles += `#app .hud-radmir-speedometer-secondary {background-image: url(${oldRadmirConfig.speedometer.secondary});}\n`;
+        }
+        if (oldRadmirConfig.speedometer.main && oldRadmirConfig.speedometer.main.length > 0) {
+            styles += `#app .hud-radmir-speedometer-main__speed {background-image: url(${oldRadmirConfig.speedometer.main});}\n`;
+        }
     }
+    
+    // Проверяем наличие capture
+    if (oldRadmirConfig && oldRadmirConfig.capture) {
+        if (oldRadmirConfig.capture.my && oldRadmirConfig.capture.my.length > 0) {
+            styles += `#app .capture-table__col-kills.my {background-image: url(${oldRadmirConfig.capture.my});}\n`;
+        }
+        if (oldRadmirConfig.capture.enemyies && oldRadmirConfig.capture.enemyies.length > 0) {
+            styles += `#app .capture-table__col-kills {background-image: url(${oldRadmirConfig.capture.enemyies});}\n`;
+        }
+        if (oldRadmirConfig.capture.timer && oldRadmirConfig.capture.timer.length > 0) {
+            styles += `#app .capture-table__timer {background-image: url(${oldRadmirConfig.capture.timer});}\n`;
+        }
+    }
+    
+    // Применяем стили
+    if (styles.length > 0) {
+        this.setNewStyles(styles);
+    }
+}
+
+setNewStyles(styles) {
+    // Удаляем старый стиль если есть
+    const oldStyle = document.getElementById('capture-custom-styles');
+    if (oldStyle) {
+        oldStyle.remove();
+    }
+    
+    // Создаем новый
+    const styleElement = document.createElement('style');
+    styleElement.id = 'capture-custom-styles';
+    styleElement.innerHTML = styles;
+    document.head.appendChild(styleElement);
+}
+
+init() {
+    if (!oldRadmirConfig) {
+        console.log('assets not found');
+        return;
+    }
+    // Инициализация...
+}
     function initializeHudProxy() {
         const checkInterval = setInterval(() => {
             if (typeof window.interface === "function" && window.interface("Hud").info) {
