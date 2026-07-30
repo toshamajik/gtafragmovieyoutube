@@ -341,8 +341,8 @@ body #app .hud-radmir-info {
     margin-bottom: 3vh;
 }
 .Old-Fixed-Logo img {
-  width: 19.3vh;
-  height: 6vh;
+  width: 19.2vh;
+  height: 6.4vh;
   margin-right: 3vh;
 }
 .Old-Fixed-Bonus{
@@ -382,6 +382,9 @@ body #app .hud-radmir-info {
 .Ammo-in-clip, .old-param__icon {
     margin-right: 1.1vh;
 }
+.old-param__icon {
+     margin-right: 12px;
+    }
 .Old-Fixed-Weapon_back {
     position: absolute;
     right: -1.4vh;
@@ -502,18 +505,20 @@ body #app .hud-radmir-info {
     background-color: #fff;
     box-shadow: #ffffff80 0 0 5px 0;
 }
+.Old-Fixed-Param.armour,.old-param__icon {
+         margin-right: 13px;   
+}
 .Old-Fixed-Param.hunger{
-  margin-left:.09vh;
+        margin-left: 1px;
 }
 .Old-Fixed-Param.breath{
-  margin-left:-1vh;
-  margin-top:1.5vh;
+        margin-left: 3px;
 } 
 .Old-Fixed-Param.health{
-  margin-left:1.85vh;
+        margin-left: 20px;
 }
 .Old-Fixed-Param.armour,.Old-Param-Values{
-  margin-left:.93vh;
+        margin-left: 14px;
 }
 .Old-Fixed-Wanted {
     position: relative;
