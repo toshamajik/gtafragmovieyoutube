@@ -629,6 +629,8 @@ body .authorization { background: 0 0; } #app .authorization { background-image:
 }
       `;
   
+      document.head.appendChild(hudStyleElement);
+  
       const hudElement = document.createElement("div");
       hudElement.id = 'OldHudContainer';
   
