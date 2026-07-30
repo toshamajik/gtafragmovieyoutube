@@ -342,7 +342,7 @@ body #app .hud-radmir-info {
 }
 .Old-Fixed-Logo img {
   width: 19.2vh;
-  height: 6.4vh;
+  height: 6.6vh;
   margin-right: 3vh;
 }
 .Old-Fixed-Bonus{
@@ -488,17 +488,19 @@ body #app .hud-radmir-info {
     font-size: 2vh;
 }
 .Old-Fixed-Param.health .Old-Progress__Values {
-    background-color: #ed2e2e;
-    box-shadow: #ed2e2e90 0 0 .46vh 0;
+        width: 50%;
+        background-color: #ed2e2e;
+        box-shadow: rgba(237, 46, 46, 0.5) 0 0 5px 0;
 }
 .Old-Fixed-Param.armour .Old-Progress__Values {
-    background-color: #526ee6;
-    box-shadow: #526ee690 0 0 .46vh 0;
+        width: 50%;
+        background-color: #526ee6;
+        box-shadow: rgba(82, 110, 230, 0.5) 0 0 5px 0;;
 }
 .Old-Fixed-Param.hunger .Old-Progress__Values {
-    width: 50%;
-    box-shadow: #ff872e90 0 0 5px 0;
-    background-color: #ff872e;
+       width: 50%;
+        box-shadow: hsl(26deg 100% 59% / 30%) 0 0 5px 0;
+        background-color: #ff872e;
 }
 .Old-Fixed-Param.breath .Old-Progress__Values {
     width: 99%;
@@ -819,7 +821,7 @@ body .authorization { background: 0 0; } #app .authorization { background-image:
             const freezeEl = document.querySelector(".Old-Fixed-Freeze");
             const isVisible = window.interface("Hud").isNewYear;
             if (freezeEl) {
-                freezeEl.style.display = isVisible ? "" : "none";
+                freezeEl.style.display = isVisible ? "" : "fixed";
             }
         },
         
