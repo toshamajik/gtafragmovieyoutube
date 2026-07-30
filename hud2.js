@@ -853,26 +853,6 @@ body .authorization { background: 0 0; } #app .authorization { background-image:
             }
         });
     }
-    function addEventOnChangeHudInfo(callBack) {
-			if (oldRadmirConfig.addNewInterfaces.data.callBacks.length === 0) {
-				const hudInfo = JSON.parse(
-					JSON.stringify(window.interface("Hud").info)
-				)
-				window.interface("Hud").info = new Proxy(hudInfo, {
-					set(target, property, value) {
-						try {
-							oldRadmirConfig.addNewInterfaces.data.callBacks.forEach((cb) =>
-								cb(property, value)
-							)
-						} catch (error) {
-							console.error(error)
-						}
-						return Reflect.set(target, property, value)
-					},
-				})
-			}
-			oldRadmirConfig.addNewInterfaces.data.callBacks.push(callBack)
-		},
 
     function updateParam(paramClass, value) {
         const paramElement = document.querySelector(`.Old-Fixed-Param.${paramClass}`);
