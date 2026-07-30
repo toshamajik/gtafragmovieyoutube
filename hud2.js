@@ -853,11 +853,6 @@ body .authorization { background: 0 0; } #app .authorization { background-image:
             }
         });
     }
-    createStyles(styles) {
-		const styleElement = document.createElement("style")
-		styleElement.innerHTML = styles
-		document.head.appendChild(styleElement)
-	},
     function addEventOnChangeHudInfo(callBack) {
 			if (oldRadmirConfig.addNewInterfaces.data.callBacks.length === 0) {
 				const hudInfo = JSON.parse(
@@ -878,49 +873,7 @@ body .authorization { background: 0 0; } #app .authorization { background-image:
 			}
 			oldRadmirConfig.addNewInterfaces.data.callBacks.push(callBack)
 		},
-    addNewSpeedometer(htmlContent, className, callBack) {
-		if (oldRadmirConfig.addNewInterfaces.data.isNewSpeedometerAdded) return
-		oldRadmirConfig.createStyles("body #app .hud-radmir-speedometer {display: none}")
-		const speedometerElement = document.createElement("div")
-			try {
-				const speedometer = JSON.parse(JSON.stringify(window.interface("Hud").speedometer))
-				window.interface("Hud").speedometer = new Proxy(speedometer, {
-					set(target, property, value) {
-						callBack(property, value)
-						return Reflect.set(target, property, value)
-					},
-				})
-				oldRadmirConfig.addNewInterfaces.addHudMethods({
-					showTachometer: () => {
-						callBack("tachometer-show", 1)
-					},
-					hideTachometer: () => {
-						callBack("tachometer-show", 0)
-					},
-					setTurnLightStatus: (direction, status) => {
-						callBack(direction ? "right" : "left", status)
-					},
-				})
-				const params = JSON.parse(
-					JSON.stringify(window.interface("Hud").speedometer.params)
-				)
-				window.interface("Hud").speedometer.params = new Proxy(params, {
-					set(target, property, value) {
-						callBack(property, value)
-						return Reflect.set(target, property, value)
-					},
-				})
-				speedometerElement.className = className
-				speedometerElement.innerHTML = htmlContent
-				oldRadmirConfig.addNewInterfaces.data.hudContainer.appendChild(
-					speedometerElement
-				)
-				oldRadmirConfig.addNewInterfaces.data.isNewSpeedometerAdded = !0
-			} catch (error) {
-				console.error(error)
-			}
-			return speedometerElement
-		},
+
     function updateParam(paramClass, value) {
         const paramElement = document.querySelector(`.Old-Fixed-Param.${paramClass}`);
         if (paramElement) {
