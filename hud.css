@@ -66,6 +66,7 @@
 }
 
 #app .player-interaction__container,#app .radmir-chat-input__input,#app .window,.inventory-container__info__container,body .container {background: linear-gradient(45deg,#000000ef)!important;}
+body .old-bonus {background: #000000ef;font-style: normal;}
 #app .inventory-action__modal,#app .inventory-extra__container,#app .inventory-main,#app .player-interaction-favorite,#app .player-interaction-layer {background: linear-gradient(45deg,#000000ef);}
 #app .player-interaction-favorite:hover,body .info-card {background: rgba(0,0,0,.7);}
 body .info-card__data {background: rgba(0,0,0,.6);}
@@ -87,14 +88,14 @@ body .admin-panel {background: #000000ef!important;}
 .old-top {position: absolute;right: 1vw;top: 3vh;display: flex;flex-direction: column;align-items: flex-end;}
 .old-logo {position: relative;margin-bottom: 3vh;}
 .old-logo img {width: 19vh;height: 6.2vh;margin-right: 3vh;}
-.old-bonus {position: absolute;right: 1.2vw;top: 4vh;width: 2.96vh;height: 2.96vh;border-radius: 10vh;background: radial-gradient(93.1% 93.1% at 126.72% 6.9%,#eb00ff 0,#eb00ff00 100%),linear-gradient(129.39deg,#f5be09 30.88%,#e9651b 98.06%);display: flex;align-items: center;justify-content: center;font-family: 'italic';font-weight: 900;font-size: 1.3vh;}
+.old-bonus {position: absolute;right: 1.2vw;top: 4vh;width: 2.96vh;height: 2.96vh;border-radius: 10vh;background: radial-gradient(93.1% 93.1% at 126.72% 6.9%,#eb00ff 0,#eb00ff00 100%),linear-gradient(129.39deg,#f5be09 30.88%,#e9651b 98.06%);display: flex;align-items: center;justify-content: center;font-family: 'GothamPro Black';font-weight: 800;font-size: 1.3vh;}
 .old-main,.old-money,.old-wanted__row {align-items: center;display: flex;}
 .old-main {margin-top: .46vh;margin-right: 3.46vh;}
 .old-weapon {width: 16.6vh;height: 16.6vh;position: relative;display: flex;justify-content: flex-end;margin-left: -.93vh;margin-right: .46vh;}
 .old-ammo__in-clip,.old-param__icon {margin-right: 1.11vh;}
 .old-weapon__back {position: absolute;right: -1.4vh;top: -1.6vh;z-index: -1;}
 .old-weapon__icon {width: 37vh;height: 16.6vh;}
-.old-weapon__ammo {position: absolute;bottom: 5vh;right: 5vh;display: flex;align-items: flex-end;}
+.old-weapon__ammo {position: absolute;bottom: 4.3vh;right: 5vh;display: flex;align-items: flex-end;}
 .old-ammo__in-clip {font-size: 2.31vh;line-height: 1;text-shadow: 0 0 .46vh #00000080;}
 .old-ammo__total {font-family: 'GothamPro Light Italic';font-weight: 300;font-style: italic;font-size: 1.67vh;text-shadow: 0 0 .46vh #000000b3;}
 .old-params {height: 13.5vh;position: relative;z-index: 1;}
