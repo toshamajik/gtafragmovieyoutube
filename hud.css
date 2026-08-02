@@ -1,6 +1,70 @@
-@font-face{font-family:'GothamPro Light';src:url('https://raw.githubusercontent.com/horizonfaza/fonts/refs/heads/main/gothampro_light.ttf') format('truetype');font-weight:300;font-style:normal}@font-face{font-family:'GothamPro Light Italic';src:url('https://raw.githubusercontent.com/horizonfaza/fonts/refs/heads/main/gothampro_lightitalic.ttf') format('truetype');font-weight:300;font-style:italic}@font-face{font-family:'GothamPro Regular';src:url('https://raw.githubusercontent.com/horizonfaza/fonts/refs/heads/main/gothampro.ttf') format('truetype');font-weight:400;font-style:normal}@font-face{font-family:'GothamPro Italic';src:url('https://raw.githubusercontent.com/horizonfaza/fonts/refs/heads/main/gothampro_italic.ttf') format('truetype');font-weight:400;font-style:italic}@font-face{font-family:'GothamPro Medium';src:url('https://raw.githubusercontent.com/horizonfaza/fonts/refs/heads/main/gothampro_medium.ttf') format('truetype');font-weight:500;font-style:normal}@font-face{font-family:'GothamPro Medium Italic';src:url('https://raw.githubusercontent.com/horizonfaza/fonts/refs/heads/main/gothampro_mediumitalic.ttf') format('truetype');font-weight:500;font-style:italic}@font-face{font-family:'GothamPro Bold';src:url('https://raw.githubusercontent.com/horizonfaza/fonts/refs/heads/main/gothampro_bold.ttf') format('truetype');font-weight:700;font-style:normal}@font-face{font-family:'GothamPro Bold Italic';src:url('https://raw.githubusercontent.com/horizonfaza/fonts/refs/heads/main/gothampro_bolditalic.ttf') format('truetype');font-weight:700;font-style:italic}@font-face{font-family:'GothamPro Black';src:url('https://raw.githubusercontent.com/horizonfaza/fonts/refs/heads/main/gothampro_black.ttf') format('truetype');font-weight:900;font-style:normal}@font-face{font-family:'GothamPro Black Italic';src:url('https://raw.githubusercontent.com/horizonfaza/fonts/refs/heads/main/gothampro_blackitalic.ttf') format('truetype');font-weight:900;font-style:italic}
-body .authorization {background: 0 0;}
-#app .authorization {background-image: url();background-size: auto 100vh;}
+@font-face {
+    font-family: "GothamPro Light";
+    src: url("https://raw.githubusercontent.com/user55672/Old-Card/refs/heads/main/fonst/gothampro_light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "GothamPro Light Italic";
+    src: url("https://raw.githubusercontent.com/user55672/Old-Card/refs/heads/main/fonst/gothampro_lightitalic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: "GothamPro Regular";
+    src: url("https://raw.githubusercontent.com/user55672/Old-Card/refs/heads/main/fonst/gothampro.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "GothamPro Italic";
+    src: url("https://raw.githubusercontent.com/user55672/Old-Card/refs/heads/main/fonst/gothampro_italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "GothamPro Medium";
+    src: url("https://raw.githubusercontent.com/user55672/Old-Card/refs/heads/main/fonst/gothampro_medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "GothamPro Medium Italic";
+    src: url("https://raw.githubusercontent.com/user55672/Old-Card/refs/heads/main/fonst/gothampro_mediumitalic.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: "GothamPro Bold";
+    src: url("https://raw.githubusercontent.com/user55672/Old-Card/refs/heads/main/fonst/gothampro_bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "GothamPro Bold Italic";
+    src: url("https://raw.githubusercontent.com/user55672/Old-Card/refs/heads/main/fonst/gothampro_bolditalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: "GothamPro Black";
+    src: url("https://raw.githubusercontent.com/user55672/Old-Card/refs/heads/main/fonst/gothampro_black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: "GothamPro Black Italic";
+    src: url("https://raw.githubusercontent.com/user55672/Old-Card/refs/heads/main/fonst/gothampro_blackitalic.ttf") format("truetype");
+    font-weight: 900;
+    font-style: italic;
+}
+@font-face {
+    font-family: ALSRubl;
+    src: url("https://raw.githubusercontent.com/user55672/Old-Card/refs/heads/main/fonst/ALSRubl.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
 #app .player-interaction__container,#app .radmir-chat-input__input,#app .window,.inventory-container__info__container,body .container {background: linear-gradient(45deg,#000000ef)!important;}
 body .old-bonus {background: #000000ef;font-style: normal;}
 #app .inventory-action__modal,#app .inventory-extra__container,#app .inventory-main,#app .player-interaction-favorite,#app .player-interaction-layer {background: linear-gradient(45deg,#000000ef);}
@@ -23,7 +87,7 @@ body .admin-panel {background: #000000ef!important;}
 .old-hud {width: 100vw;height: 100vh;position: relative;}
 .old-top {position: absolute;right: 1vw;top: 3vh;display: flex;flex-direction: column;align-items: flex-end;}
 .old-logo {position: relative;margin-bottom: 3vh;}
-.old-logo img {width: 18.52vh;height: 6.2vh;margin-right: 2vh;}
+.old-logo img {width: 18.52vh;height: 6.2vh;margin-right: 3vh;}
 .old-bonus {position: absolute;right: 1.2vw;top: 4vh;width: 2.96vh;height: 2.96vh;border-radius: 10vh;background: radial-gradient(93.1% 93.1% at 126.72% 6.9%,#eb00ff 0,#eb00ff00 100%),linear-gradient(129.39deg,#f5be09 30.88%,#e9651b 98.06%);display: flex;align-items: center;justify-content: center;font-family: 'GothamPro Black';font-weight: 900;font-size: 1.3vh;}
 .old-main,.old-money,.old-wanted__row {align-items: center;display: flex;}
 .old-main {margin-top: .46vh;margin-right: 3.46vh;}
@@ -113,6 +177,10 @@ body .admin-panel {background: #000000ef!important;}
 #app .player-interaction-favorite:hover {background: rgba(63,63,63,.8);}
 #app .info-card__data {border-radius: 2.87vh;}
 #app .info-card .text {color: #cfcfcf;}
+#app .immortality-progress-bar .immortality-progress-bar_background,#app .immortality-progress-bar .circle-progresssvg {display: none;}
+#app .immortality-progress-bar .immortality-progress-baricon {left: -10.4vh;bottom: -2.2vh;}
+#app .login-formbutton_active {border-radius: .6vh}
+#app .login-formbutton {border-radius: .6vh}
 #app .capture-table {background: #00000061;box-shadow: 0 0 5vh 0 #00000044;border-radius: 1vh;transform: scale(.9);padding: 1.5vh 1.8vh;}
 #app .capture-table__col-kills,#app .capture-table__col-kills.my,#app .capture-table__timer {background: #272727;color: #fff;font-style: normal;font-weight: 900;font-size: 1.8vh;font-family: 'GothamPro Bold';border-radius: .5vh;}
 #app .capture-table__timer {width: 7.5vh;height: 3.7vh;}
